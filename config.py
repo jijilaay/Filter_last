@@ -34,6 +34,17 @@ VID_SEARCH = os.environ.get("VID_SEARCH", "no").lower()
 # Should bot search for music files in channels
 MUSIC_SEARCH = os.environ.get("MUSIC_SEARCH", "no").lower()
 
+# Subtitle Text
+SUB_TEXT = os.environ.get("SUB_TEXT", "𝕊𝕦𝕓𝕥𝕚𝕥𝕝𝕖 ❗️ ")
+
+# Channel 1
+CHANNEL_ONE = os.environ.get("CHANNEL_ONE", "-1001505653053")
+
+# Channel 2
+CHANNEL_TWO = os.environ.get("CHANNEL_TWO", "-1001577630215")
+
+# Bots UserName
+BOT_URL = os.environ.get("BOT_URL", "").lower()
 
 
 
