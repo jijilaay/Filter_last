@@ -56,6 +56,18 @@
             "description": "User Name of File Sharing Bot (With @)",
             "value": ""
         },
+        "CHANNEL_ONE": {
+            "description": "ID of CHannel One",
+            "value": "-1001505653053"
+        },
+        "CHANNEL_TWO": {
+            "description": "ID of CHannel Two",
+            "value": "-1001577630215"
+        },
+        "SUB_TEXT": {
+            "description": "Button Text For Subtitle Files",
+            "value": "𝕊𝕦𝕓𝕥𝕚𝕥𝕝𝕖 ❗️ "
+        },
     },
     "buildpacks": [
         {
