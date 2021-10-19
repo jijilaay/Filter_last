@@ -19,9 +19,9 @@ async def encode_iru(string):
     array_link_iru = string.split("/")
     numCutNum = array_link_iru[len(array_link_iru)-1]
     channelid = array_link_iru[len(array_link_iru)-2]
-    if channelid == CHANNEL_ONE:
+    if channelid == CHANNEL_ONE.replace("-100",""):
         outEncStr = "get-"+numCutNum+"-irupc"
-    elif channelid == CHANNEL_TWO:
+    elif channelid == CHANNEL_TWO.replace("-100",""):
         outEncStr = "get-"+numCutNum+"-irupc-irupc"
     else:
         outEncStr = "get-"+numCutNum+"-irupc-irupc-irupc"
