@@ -63,11 +63,7 @@
         "CHANNEL_TWO": {
             "description": "ID of CHannel Two",
             "value": "-1001577630215"
-        },
-        "SUB_TEXT": {
-            "description": "Button Text For Subtitle Files",
-            "value": "𝕊𝕦𝕓𝕥𝕚𝕥𝕝𝕖 ❗️ "
-        },
+        }
     },
     "buildpacks": [
         {
