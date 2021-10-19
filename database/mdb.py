@@ -28,7 +28,7 @@ async def encode_iru(string):
     string_bytes = outEncStr.encode("ascii")
     base64_bytes = base64.b64encode(string_bytes)
     base64_string = base64_bytes.decode("ascii")
-    botzalinks = f"https://t.me/{BOT_URL.replace("@","")}?start="
+    botzalinks = f"https://t.me/{BOT_URL}?start="
     base64_string_aslink = botzalinks+base64_string
     return base64_string_aslink
 
