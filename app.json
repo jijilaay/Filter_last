@@ -51,7 +51,11 @@
         "MUSIC_SEARCH": {
             "description": "Should bot search for music files in channels ( Give 'yes' or 'no' )",
             "value": "no"
-        }
+        },
+        "BOT_URL": {
+            "description": "User Name of File Sharing Bot (With @)",
+            "value": ""
+        },
     },
     "buildpacks": [
         {
