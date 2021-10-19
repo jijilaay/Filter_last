@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @trojanzhex
 
-
+import base64
 import re
 import pymongo
 
