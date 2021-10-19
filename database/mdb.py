@@ -9,13 +9,28 @@ import pymongo
 from pymongo.errors import DuplicateKeyError
 from marshmallow.exceptions import ValidationError
 
-from config import DATABASE_URI, DATABASE_NAME
+from config import DATABASE_URI, DATABASE_NAME, SUB_TEXT, CHANNEL_ONE, CHANNEL_TWO, BOT_URL
 
 
 myclient = pymongo.MongoClient(DATABASE_URI)
 mydb = myclient[DATABASE_NAME]
 
-
+async def encode_iru(string):
+    array_link_iru = string.split("/")
+    numCutNum = array_link_iru[len(array_link_iru)-1]
+    channelid = array_link_iru[len(array_link_iru)-2]
+    if channelid == CHANNEL_ONE:
+        outEncStr = "get-"+numCutNum+"-irupc"
+    elif channelid == CHANNEL_TWO:
+        outEncStr = "get-"+numCutNum+"-irupc-irupc"
+    else:
+        outEncStr = "get-"+numCutNum+"-irupc-irupc-irupc"
+    string_bytes = outEncStr.encode("ascii")
+    base64_bytes = base64.b64encode(string_bytes)
+    base64_string = base64_bytes.decode("ascii")
+    botzalinks = f"https://t.me/{BOT_URL.replace("@","")}?start="
+    base64_string_aslink = botzalinks+base64_string
+    return base64_string_aslink
 
 async def savefiles(docs, group_id):
     mycol = mydb[str(group_id)]
@@ -163,24 +178,52 @@ async def findgroupid(channel_id):
     return groupids
 
 
+# Search Query for TG Files
 async def searchquery(group_id, name):
-
     mycol = mydb[str(group_id)]
 
     filenames = []
     filelinks = []
-
+    ##Start
+    name = name.split(' tg')[0]
+    ##End
+    name = name.replace(" tg", "")
+    
     # looking for a better regex :(
     pattern = name.lower().strip().replace(' ','.*')
     raw_pattern = r"\b{}\b".format(pattern)
     regex = re.compile(raw_pattern, flags=re.IGNORECASE)
-
+    print(regex)
+    
     query = mycol.find( {"file_name": regex} )
+    indexValIru = 0
     for file in query:
-        filename = "[" + str(file['file_size']//1048576) + "MB] " + file['file_name']
-        filenames.append(filename)
-        filelink = file['link']
-        filelinks.append(filelink)
+        if file['file_size'] == "👍":
+            filename = "👍"+ file['file_name']
+            filelink = file['link']
+            filenames.insert(indexValIru,filename)
+            filelinks.insert(indexValIru,filelink.replace(" ", "."))
+            indexValIru = indexValIru+1
+        else:
+            try:
+              if file['file_name'].index(".srt")> 0:
+                  filename = SUB_TEXT + file['file_name']
+                  filelink = await encode_iru(file['link'])
+            except:
+                try:
+                    if file['file_name'].index(".zip")> 0:
+                        filename = SUB_TEXT + file['file_name']
+                        filelink = await encode_iru(file['link'])
+                except:
+                    try:
+                        if file['file_name'].index(".rar")> 0:
+                            filename = SUB_TEXT + file['file_name']
+                            filelink = await encode_iru(file['link'])
+                    except:
+                        fName_mod = ' '.join(word for word in file['file_name'].replace(".", " ").replace("-", " ").split(' ') if not word.startswith('@'))
+                        filename = "[" + str(file['file_size']//1048576) + "MB] " + fName_mod
+                        filelink = await encode_iru(file['link'])
+
+            filenames.append(filename)
+            filelinks.append(filelink)
     return filenames, filelinks
-
-
