@@ -8,8 +8,7 @@ import pymongo
 
 from pymongo.errors import DuplicateKeyError
 from marshmallow.exceptions import ValidationError
-
-from config import DATABASE_URI, DATABASE_NAME, SUB_TEXT, CHANNEL_ONE, CHANNEL_TWO, BOT_URL
+from config import DATABASE_URI, DATABASE_NAME, SUB_TEXT, BOT_URL
 
 
 myclient = pymongo.MongoClient(DATABASE_URI)
@@ -19,12 +18,7 @@ async def encode_iru(string):
     array_link_iru = string.split("/")
     numCutNum = array_link_iru[len(array_link_iru)-1]
     channelid = array_link_iru[len(array_link_iru)-2]
-    if channelid == CHANNEL_ONE.replace("-100",""):
-        outEncStr = "get-"+numCutNum+"-irupc"
-    elif channelid == CHANNEL_TWO.replace("-100",""):
-        outEncStr = "get-"+numCutNum+"-irupc-irupc"
-    else:
-        outEncStr = "get-"+numCutNum+"-irupc-irupc-irupc"
+    outEncStr = f"irupc-{numCutNum}-{channelid}"
     string_bytes = outEncStr.encode("ascii")
     base64_bytes = base64.b64encode(string_bytes)
     base64_string = base64_bytes.decode("ascii")
@@ -193,7 +187,6 @@ async def searchquery(group_id, name):
     pattern = name.lower().strip().replace(' ','.*')
     raw_pattern = r"\b{}\b".format(pattern)
     regex = re.compile(raw_pattern, flags=re.IGNORECASE)
-    print(regex)
     
     query = mycol.find( {"file_name": regex} )
     indexValIru = 0
