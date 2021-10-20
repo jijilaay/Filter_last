@@ -2,4 +2,4 @@ Pyrogram
 TgCrypto
 umongo
 dnspython
-
+Pyromod
