@@ -337,29 +337,3 @@ async def stats(client: Bot, message: Message):
 
     await message.reply_text(stats)
 
-
-@Client.on_message(filters.channel & (filters.document | filters.video | filters.audio))
-async def addnewfiles(client: Bot, message: Message):
-
-    media = message.document or message.video or message.audio
-
-    channel_id = message.chat.id
-    file_name = media.file_name
-    file_size = media.file_size
-    file_id = media.file_id
-    link = message.link
-
-    docs = []
-    data = {
-        '_id': file_id,
-        'channel_id' : channel_id,
-        'file_name': file_name,
-        'file_size': file_size,
-        'link': link
-    }
-    docs.append(data)
-
-    groupids = await findgroupid(channel_id)
-    if groupids:
-        for group_id in groupids:
-            await savefiles(docs, group_id)
