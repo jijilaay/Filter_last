@@ -33,12 +33,12 @@
             "value": ""
         },
         "DATABASE_URI": {
-            "description": "Database URL of Adv-Auto Filter Bot",
+            "description": "Database URL of OMDB Filter Bot",
             "value": ""
         },
         "DATABASE_NAME": {
-            "description": "Your database name from mongoDB. ( Default will 'Cluster0' )",
-            "value": "Adv_Auto_Filter"
+            "description": "Your database name from mongoDB.",
+            "value": "Cluster0"
         },
         "DOC_SEARCH": {
             "description": "Should bot search for document files in channels ( Give 'yes' or 'no' )",
@@ -62,7 +62,7 @@
         },
         "DB_COL_NAME": {
             "description": "Name of FIlter Collection",
-            "value": "Filter_Collection"
+            "value": "Telegram_files"
         }
     },
     "buildpacks": [
