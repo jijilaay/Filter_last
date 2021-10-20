@@ -20,10 +20,10 @@ TG_USER_SESSION = os.environ.get("TG_USER_SESSION", "")
 DATABASE_URI = os.environ.get("DATABASE_URI", "")
 
 # Your database name from mongoDB
-DATABASE_NAME = os.environ.get("DATABASE_NAME", "Adv_Auto_Filter")
+DATABASE_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 
 # Your database Collection Name
-DB_COL_NAME = os.environ.get("DB_COL_NAME", "Filter_Collection")
+DB_COL_NAME = os.environ.get("DB_COL_NAME", "Telegram_files")
 
 # ID of users that can use the bot commands
 AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "2010671024").split())
