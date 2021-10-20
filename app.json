@@ -58,7 +58,7 @@
         },
         "CUSTOM_CAPTION": {
             "description": "Custom Caption (Only for Documnets)",
-            "value": "<code>{filename}</code>\n\n┏━━━━•❅•°•❈•°•❅•━━━━┓\n✰👑rule breakers👑✰\nGroup owner - <b>@viha_is_power</b>\n┗━━━━•❅•°•❈•°•❅•━━━━┛"
+            "value": ""
         },
     },
     "buildpacks": [
