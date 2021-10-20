@@ -53,17 +53,13 @@
             "value": "no"
         },
         "BOT_URL": {
-            "description": "User Name of File Sharing Bot (With @)",
-            "value": ""
+            "description": "User Name of File Sharing Bot (Without @)",
+            "value": "Rule_Breakers_assistant2bot"
         },
-        "CHANNEL_ONE": {
-            "description": "ID of CHannel One",
-            "value": "-1001505653053"
+        "CUSTOM_CAPTION": {
+            "description": "Custom Caption (Only for Documnets)",
+            "value": "<code>{filename}</code>\n\n┏━━━━•❅•°•❈•°•❅•━━━━┓\n✰👑rule breakers👑✰\nGroup owner - <b>@viha_is_power</b>\n┗━━━━•❅•°•❈•°•❅•━━━━┛"
         },
-        "CHANNEL_TWO": {
-            "description": "ID of CHannel Two",
-            "value": "-1001577630215"
-        }
     },
     "buildpacks": [
         {
