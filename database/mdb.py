@@ -179,7 +179,7 @@ async def searchquery(group_id, name):
     for file in query:
         if file['file_size'] == "👍":
             filename = "👍"+ file['file_name']
-            filelink = f"https://t.me/{BOT_URL}?start={file['unique_id']}"
+            filelink = f"https://t.me/{BOT_URL}?start=subinps_-_-_-_{file['_id']}"
             filenames.insert(indexValIru,filename)
             filelinks.insert(indexValIru,filelink.replace(" ", "."))
             indexValIru = indexValIru+1
@@ -187,21 +187,21 @@ async def searchquery(group_id, name):
             try:
               if file['file_name'].index(".srt")> 0:
                   filename = SUB_TEXT + file['file_name']
-                  filelink = f"https://t.me/{BOT_URL}?start={file['unique_id']}"
+                  filelink = f"https://t.me/{BOT_URL}?start=subinps_-_-_-_{file['_id']}"
             except:
                 try:
                     if file['file_name'].index(".zip")> 0:
                         filename = SUB_TEXT + file['file_name']
-                        filelink = f"https://t.me/{BOT_URL}?start={file['unique_id']}"
+                        filelink = f"https://t.me/{BOT_URL}?start=subinps_-_-_-_{file['_id']}"
                 except:
                     try:
                         if file['file_name'].index(".rar")> 0:
                             filename = SUB_TEXT + file['file_name']
-                            filelink = f"https://t.me/{BOT_URL}?start={file['unique_id']}"
+                            filelink = f"https://t.me/{BOT_URL}?start=subinps_-_-_-_{file['_id']}"
                     except:
                         fName_mod = ' '.join(word for word in file['file_name'].replace(".", " ").replace("-", " ").split(' ') if not word.startswith('@'))
                         filename = "[" + str(file['file_size']//1048576) + "MB] " + fName_mod
-                        filelink = f"https://t.me/{BOT_URL}?start={file['unique_id']}"
+                        filelink = f"https://t.me/{BOT_URL}?start=subinps_-_-_-_{file['_id']}"
 
             filenames.append(filename)
             filelinks.append(filelink)
