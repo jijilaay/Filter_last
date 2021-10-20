@@ -11,54 +11,7 @@ from helper_func import decode, get_messages
 from config import CUSTOM_CAPTION
 
 @Client.on_message(filters.command(["start"]) & filters.private)
-async def start(client, message):
-"""
-    text = message.text
-    if len(text)>7:
-        return
-        try:
-            base64_string = text.split(" ", 1)[1]
-        except:
-            return
-        string = await decode(base64_string)
-        argument = string.split("-")
-        if len(argument) == 3:
-            try:
-                ids = [int(argument[1])]
-                chennelID = f"-100{int(argument[2])}"
-            except:
-                return
-        temp_msg = await message.reply("Please wait...")
-        try:
-            messages = await get_messages(client, ids, chennelID)
-        except:
-            await message.reply_text("Somthing_Went_Wrong...!")
-            return
-        await temp_msg.delete()
-
-        for msg in messages:
-            if bool(CUSTOM_CAPTION) & bool(msg.document):
-                caption = CUSTOM_CAPTION.format(previouscaption = "" if not msg.caption else msg.caption.html, filename = msg.document.file_name)
-            else:
-                caption = "" if not msg.caption else msg.caption.html
-
-
-            try:
-                await msg.copy(
-                  chat_id=message.from_user.id, 
-                  caption = caption, 
-                  parse_mode = 'html', 
-                  reply_markup=None
-                )
-                await asyncio.sleep(0.5)
-            except FloodWait as e:
-                await asyncio.sleep(e.x)
-                await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = 'html')
-            except:
-                pass
-        return
-"""
-    
+async def start(client, message):    
     reply_markup = InlineKeyboardMarkup(
         [
             [
