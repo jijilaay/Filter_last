@@ -59,7 +59,7 @@
         "CUSTOM_CAPTION": {
             "description": "Custom Caption (Only for Documnets)",
             "value": ""
-        },
+        }
     },
     "buildpacks": [
         {
