@@ -12,10 +12,10 @@ from config import CUSTOM_CAPTION
 
 @Client.on_message(filters.command(["start"]) & filters.private)
 async def start(client, message):
+"""
     text = message.text
     if len(text)>7:
         return
-"""
         try:
             base64_string = text.split(" ", 1)[1]
         except:
@@ -58,21 +58,21 @@ async def start(client, message):
                 pass
         return
 """
-    else:
-        reply_markup = InlineKeyboardMarkup(
+    
+    reply_markup = InlineKeyboardMarkup(
+        [
             [
-                [
-                    InlineKeyboardButton("🎬 Our Main Movie Group", url="https://t.me/joinchat/Q1uroGQ645U1OTg1"),
-                ]
+                InlineKeyboardButton("🎬 Our Main Movie Group", url="https://t.me/joinchat/Q1uroGQ645U1OTg1"),
             ]
-        )
-        await message.reply_text(
-            text = f"Hi, මොනවාද repo d ඕන ? විහගයා ආත්මාර්ථකාමී සොරි,ඕනනම් උබෙම කියල   එකක්  හදපන් මෙතන අනුන්ගේ ඒවා බලන් නැතුව ",
-            reply_markup = reply_markup,
-            disable_web_page_preview = True,
-            quote = True
-        )
-        return
+        ]
+    )
+    await message.reply_text(
+        text = f"Hi, මොනවාද repo d ඕන ? විහගයා ආත්මාර්ථකාමී සොරි,ඕනනම් උබෙම කියල   එකක්  හදපන් මෙතන අනුන්ගේ ඒවා බලන් නැතුව ",
+        reply_markup = reply_markup,
+        disable_web_page_preview = True,
+        quote = True
+    )
+    return
 
 @Client.on_message(filters.command(["help"]) & filters.private)
 async def help(client, message):
