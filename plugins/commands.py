@@ -14,6 +14,8 @@ from config import CUSTOM_CAPTION
 async def start(client, message):
     text = message.text
     if len(text)>7:
+        return
+"""
         try:
             base64_string = text.split(" ", 1)[1]
         except:
@@ -55,11 +57,12 @@ async def start(client, message):
             except:
                 pass
         return
+"""
     else:
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Our Main Movie Group", url="https://t.me/joinchat/Q1uroGQ645U1OTg1"),
+                    InlineKeyboardButton("🎬 Our Main Movie Group", url="https://t.me/joinchat/Q1uroGQ645U1OTg1"),
                 ]
             ]
         )
