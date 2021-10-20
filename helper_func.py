@@ -3,6 +3,7 @@ import re
 import asyncio
 from pyrogram import filters
 from pyrogram.errors import FloodWait
+from config import BOT_URL
 
 async def encode_iru(string):
     array_link_iru = string.split("/")
