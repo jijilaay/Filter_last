@@ -30,7 +30,7 @@ async def start(client, message):
         try:
             messages = await get_messages(client, ids, chennelID)
         except:
-            await message.reply_text("Somthing went Wrong...!")
+            await message.reply_text("Somthing_Went_Wrong...!")
             return
         await temp_msg.delete()
 
