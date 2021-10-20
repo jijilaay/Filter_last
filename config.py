@@ -5,19 +5,19 @@ from logging.handlers import RotatingFileHandler
 
 
 # Get a bot token from botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "2060448777:AAENMgEcw3_BT-YUlBRUB8vnRc_H8sYHEgY")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
 
 # Get from my.telegram.org (or @UseTGXBot)
-APP_ID = int(os.environ.get("APP_ID", "8781954"))
+APP_ID = int(os.environ.get("APP_ID", ""))
 
 # Get from my.telegram.org (or @UseTGXBot)
-API_HASH = os.environ.get("API_HASH", "35f780f99081d3440542aca16796c7b6")
+API_HASH = os.environ.get("API_HASH", "")
 
 # Generate a user session string 
-TG_USER_SESSION = os.environ.get("TG_USER_SESSION", "BQC7DFCOK4TTIC_sciXCp2JTB5rjmvZOFwVI4U51dp1IyhAOLemGf-mc2YxVc-hzgMNvtjh9xw7uxbiRWkRg6kf8wfpVuzAH9rsi8_SehQy7MxyQCEOdWO1HbdxrZsQT1FHblKtvRk64Ql2MzaYhaj0l7hCch3bUz0i9eVjqNr--D4Dh1zEYtAQHQ_4Z8LQQQF7Igb1sxPuOM0koNDNGkrgP05M0puSTnCRhHovXyYIzajLqqszEXRWgubs6hReap7DG2tCKITRR-0cmFXwHfWJP6QVbeMyJoMT1QUJtjF6CMnkOZe2dCpT0fYTeq23GavIdxrmeV0D06JAmLncGnh7Md9hnsAA")
+TG_USER_SESSION = os.environ.get("TG_USER_SESSION", "")
 
 # Database URL from https://cloud.mongodb.com/
-DATABASE_URI = os.environ.get("DATABASE_URI", "mongodb+srv://Gamy_Gamin:Anusha@cluster0.wujnj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+DATABASE_URI = os.environ.get("DATABASE_URI", "")
 
 # Your database name from mongoDB
 DATABASE_NAME = os.environ.get("DATABASE_NAME", "Adv_Auto_Filter")
