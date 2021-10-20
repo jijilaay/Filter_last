@@ -33,12 +33,12 @@
             "value": ""
         },
         "DATABASE_URI": {
-            "description": "Database URL from https://cloud.mongodb.com/",
+            "description": "Database URL of Adv-Auto Filter Bot",
             "value": ""
         },
         "DATABASE_NAME": {
             "description": "Your database name from mongoDB. ( Default will 'Cluster0' )",
-            "value": "Cluster0"
+            "value": "Adv_Auto_Filter"
         },
         "DOC_SEARCH": {
             "description": "Should bot search for document files in channels ( Give 'yes' or 'no' )",
@@ -53,12 +53,16 @@
             "value": "no"
         },
         "BOT_URL": {
-            "description": "User Name of File Sharing Bot (Without @)",
-            "value": "Rule_Breakers_assistant2bot"
+            "description": "User Name of Adv-Auto Filetr Bot (Without @)",
+            "value": "Autofiltervirtualbot"
         },
-        "CUSTOM_CAPTION": {
-            "description": "Custom Caption (Only for Documnets)",
-            "value": "<code>{filename}</code>\n\n┏━━━━•❅•°•❈•°•❅•━━━━┓\n✰👑rule breakers👑✰\nGroup owner - <b>@viha_is_power</b>\n┗━━━━•❅•°•❈•°•❅•━━━━┛"
+        "START_MSG": {
+            "description": "Start Message",
+            "value": "Hi, මොනවාද repo d ඕන ? විහගයා ආත්මාර්ථකාමී සොරි,ඕනනම් උබෙම කියල   එකක්  හදපන් මෙතන අනුන්ගේ ඒවා බලන් නැතුව"
+        },
+        "DB_COL_NAME": {
+            "description": "Name of FIlter Collection",
+            "value": "Filter_Collection"
         }
     },
     "buildpacks": [
