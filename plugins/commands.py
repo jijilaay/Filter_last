@@ -40,29 +40,13 @@ async def start(client, message):
             else:
                 caption = "" if not msg.caption else msg.caption.html
 
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("🎬 Join Our Movie Group", url="https://t.me/joinchat/Q1uroGQ645U1OTg1"),
-                    ]
-                ]
-            ),
 
             try:
                 await msg.copy(
                   chat_id=message.from_user.id, 
                   caption = caption, 
                   parse_mode = 'html', 
-                  reply_markup=InlineKeyboardMarkup(
-                    [
-                        [
-                            InlineKeyboardButton
-                                (
-                                    '🎬 Join Our Movie Group', url="https://t.me/joinchat/Q1uroGQ645U1OTg1"
-                                )
-                        ]
-                    ]
-                  )
+                  reply_markup=None
                 )
                 await asyncio.sleep(0.5)
             except FloodWait as e:
