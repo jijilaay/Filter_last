@@ -3,3 +3,4 @@ TgCrypto
 umongo
 dnspython
 Pyromod
+Pymongo
