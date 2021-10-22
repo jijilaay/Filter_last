@@ -40,11 +40,14 @@ MUSIC_SEARCH = os.environ.get("MUSIC_SEARCH", "no").lower()
 # Subtitle Text
 SUB_TEXT = os.environ.get("SUB_TEXT", "𝕊𝕦𝕓𝕥𝕚𝕥𝕝𝕖 ❗️ ")
 
+#Subtitle File Limits
+SUBTITLE_SIZE_LIMIT = int(os.environ.get("SUBTITLE_SIZE_LIMIT", "25"))
+
 # Start MSG
 START_MSG = os.environ.get("START_MSG", "Hi, මොනවාද repo d ඕන ? විහගයා ආත්මාර්ථකාමී සොරි,ඕනනම් උබෙම කියල   එකක්  හදපන් මෙතන අනුන්ගේ ඒවා බලන් නැතුව ")
 
 # Bots UserName
-BOT_URL = os.environ.get("BOT_URL", "Rule_Breakers_assistant2bot").lower()
+BOT_URL = os.environ.get("BOT_URL", "Autofiltervirtualbot").lower()
 
 TG_BOT_SESSION = os.environ.get("TG_BOT_SESSION", "bot")
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
