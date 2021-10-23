@@ -78,7 +78,7 @@ async def filter(client: Bot, message: Message):
         )
 
         await message.reply_text(
-                f"<b> Here is the result for {message.text}</b>",
+                f"<b> 😊 single developer @viha_is_Power ☺මෙන්න ඔයා හොයන අහවල්{message.text}</b>",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )    
 
