@@ -207,7 +207,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             keyboard = InlineKeyboardMarkup([
                 [InlineKeyboardButton("BACK", callback_data="help_data"),
                     InlineKeyboardButton("START", callback_data="start_data")],
-                [InlineKeyboardButton("SOURCE CODE", url="https://github.com/TroJanzHEX/Auto-Filter-Bot-V2")]
+                [InlineKeyboardButton("SOURCE CODE is locekd", url="https://t.me/viha_is_power")]
             ])
 
             await query.message.edit_text(
@@ -226,7 +226,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             await query.message.delete()
 
     else:
-        await query.answer("Thats not for you!!",show_alert=True)
+        await query.answer("ඒක වෙන කෙනෙක්ට දාපු එකක් බන්,උබට ඔනිනම් එකක් දාහන්😂.that's not for you 👉creator @viha_is_power👈!!",show_alert=True)
 
 
 def split_list(l, n):
