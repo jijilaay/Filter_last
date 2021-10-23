@@ -62,7 +62,7 @@ async def filter(client: Bot, message: Message):
                 [InlineKeyboardButton(text="📃 Pages 1/1",callback_data="pages")]
             )
             await message.reply_text(
-                f"<b>😊 single developer @viha_is_Power ☺මෙන්න ඔයා හොයන අහවල්, {message.text}</b>",
+                f"<b>😊 single developer vihanga from Rule Breakers ☺මෙන්න ඔයා හොයන අහවල්, {message.text}</b>",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )
             return
@@ -78,7 +78,7 @@ async def filter(client: Bot, message: Message):
         )
 
         await message.reply_text(
-                f"<b> 😊 single developer @viha_is_Power ☺මෙන්න ඔයා හොයන අහවල්{message.text}</b>",
+                f"<b> 😊 single developer vihanga from Rule Breakers ☺මෙන්න ඔයා හොයන අහවල් {message.text}</b>",
                 reply_markup=InlineKeyboardMarkup(buttons)
             )    
 
