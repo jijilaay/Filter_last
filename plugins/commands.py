@@ -38,7 +38,7 @@ async def help(client, message):
                     ],
                     [
                         InlineKeyboardButton(
-                            "⭕️ මගේ group එක ⭕️", url="https://t.me/joinchat/Q1uroGQ645U1OTg1")
+                            "⭕️ මගේ owner ⭕️", url="https://t.me/viha_is_power")
                     ]
                 ]
             ),
@@ -61,7 +61,7 @@ async def about(client, message):
                     ],
                     [
                         InlineKeyboardButton(
-                            "SOURCE CODE", url="https://github.com/TroJanzHEX/Auto-Filter-Bot-V2")
+                            "SOURCE CODE Is locked", url="https://t.me/viha_is_power")
                     ]
                 ]
             ),
