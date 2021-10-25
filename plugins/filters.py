@@ -59,7 +59,7 @@ async def filter(client: Bot, message: Message):
         else:
             buttons = btn
             buttons.append(
-                [InlineKeyboardButton(text="📃 Pages 1/1",callback_data="pages")]
+                [InlineKeyboardButton(text="📃 Pages 1/1",callback_data="pages"),InlineKeyboardButton("🎬 𝕊𝕙𝕒𝕣𝕖 𝕆𝕦𝕣 𝔾𝕣𝕠𝕦𝕡", url="https://t.me/share/url?url=https://t.me/joinchat/Q1uroGQ645U1OTg1&text=සුපිරි_Movie_Group_එකක්_තියනව._Film_එකේ_නම_දැම්ම_ගමන්_Film_එක_දෙන්නව._ඔන්න_Link_එක._ඉක්මනට_Join_වෙන්න")]
             )
             await message.reply_text(
                 f"<b>😊 single developer vihanga from Rule Breakers ☺මෙන්න ඔයා හොයන අහවල්, {message.text}</b>",
@@ -74,7 +74,7 @@ async def filter(client: Bot, message: Message):
             [InlineKeyboardButton(text="ඊලග පිටුවට ⏩",callback_data=f"next_0_{keyword}")]
         )    
         buttons.append(
-            [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages")]
+            [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages"),InlineKeyboardButton("🎬 𝕊𝕙𝕒𝕣𝕖 𝕆𝕦𝕣 𝔾𝕣𝕠𝕦𝕡", url="https://t.me/share/url?url=https://t.me/joinchat/Q1uroGQ645U1OTg1&text=සුපිරි_Movie_Group_එකක්_තියනව._Film_එකේ_නම_දැම්ම_ගමන්_Film_එක_දෙන්නව._ඔන්න_Link_එක._ඉක්මනට_Join_වෙන්න")]
         )
 
         await message.reply_text(
@@ -106,7 +106,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton("⏪ ආපහු", callback_data=f"back_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)+2}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"📃 Pages {int(index)+2}/{data['total']}", callback_data="pages"),InlineKeyboardButton("🎬 𝕊𝕙𝕒𝕣𝕖 𝕆𝕦𝕣 𝔾𝕣𝕠𝕦𝕡", url="https://t.me/share/url?url=https://t.me/joinchat/Q1uroGQ645U1OTg1&text=සුපිරි_Movie_Group_එකක්_තියනව._Film_එකේ_නම_දැම්ම_ගමන්_Film_එක_දෙන්නව._ඔන්න_Link_එක._ඉක්මනට_Join_වෙන්න")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -120,7 +120,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton("⏪ ආපහු", callback_data=f"back_{int(index)+1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)+1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)+2}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"📃 Pages {int(index)+2}/{data['total']}", callback_data="pages"),InlineKeyboardButton("🎬 𝕊𝕙𝕒𝕣𝕖 𝕆𝕦𝕣 𝔾𝕣𝕠𝕦𝕡", url="https://t.me/share/url?url=https://t.me/joinchat/Q1uroGQ645U1OTg1&text=සුපිරි_Movie_Group_එකක්_තියනව._Film_එකේ_නම_දැම්ම_ගමන්_Film_එක_දෙන්නව._ඔන්න_Link_එක._ඉක්මනට_Join_වෙන්න")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -145,7 +145,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton("ඊලග ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}", callback_data="pages"),InlineKeyboardButton("🎬 𝕊𝕙𝕒𝕣𝕖 𝕆𝕦𝕣 𝔾𝕣𝕠𝕦𝕡", url="https://t.me/share/url?url=https://t.me/joinchat/Q1uroGQ645U1OTg1&text=සුපිරි_Movie_Group_එකක්_තියනව._Film_එකේ_නම_දැම්ම_ගමන්_Film_එක_දෙන්නව._ඔන්න_Link_එක._ඉක්මනට_Join_වෙන්න")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -159,7 +159,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton("⏪ ආපහු", callback_data=f"back_{int(index)-1}_{keyword}"),InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{int(index)-1}_{keyword}")]
                 )
                 buttons.append(
-                    [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}", callback_data="pages")]
+                    [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}", callback_data="pages"),InlineKeyboardButton("🎬 𝕊𝕙𝕒𝕣𝕖 𝕆𝕦𝕣 𝔾𝕣𝕠𝕦𝕡", url="https://t.me/share/url?url=https://t.me/joinchat/Q1uroGQ645U1OTg1&text=සුපිරි_Movie_Group_එකක්_තියනව._Film_එකේ_නම_දැම්ම_ගමන්_Film_එක_දෙන්නව._ඔන්න_Link_එක._ඉක්මනට_Join_වෙන්න")]
                 )
 
                 await query.edit_message_reply_markup( 
@@ -226,7 +226,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             await query.message.delete()
 
     else:
-        await query.answer("ඒක වෙන කෙනෙක්ට දාපු එකක් බන්,උබට ඔනිනම් එකක් දාහන්😂.that's not for you 👉creator @viha_is_power👈!!",show_alert=True)
+        await query.answer("ඒක වෙන කෙනෙක්ට දාපු එකක් බන්,උබට ඔනිනම් එකක් දාහන්😂.\nThat's not for you \n👉creator @viha_is_power👈!!",show_alert=True)
 
 
 def split_list(l, n):
