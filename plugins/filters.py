@@ -60,11 +60,7 @@ async def filter(client: Bot, message: Message):
             buttons = btn
             buttons.append(
                 [InlineKeyboardButton(text="📃 Pages 1/1",callback_data="pages"),InlineKeyboardButton("🎬 𝕊𝕙𝕒𝕣𝕖 𝕆𝕦𝕣 𝔾𝕣𝕠𝕦𝕡", url="https://t.me/share/url?url=https://t.me/joinchat/Q1uroGQ645U1OTg1&text=⚡️සුපිරි%20Movie%20Group%20එකක්%20තියනව.%20🎬%20Film%20එකේ%20නම%20දැම්ම%20ගමන්%20Film%20එක%20දෙන්නව😳.%20ඔන්න%20Link%20එක%20ඉක්මනට%20Join%20වෙන්න✅")]
-            )
-                buttons = btn
-            buttons.append(
-                [InlineKeyboardButton(text="📃 Pages 1/1",callback_data="pages"),InlineKeyboardButton("🎬 𝕊𝕙𝕒𝕣𝕖 𝕆𝕦𝕣 𝔾𝕣𝕠𝕦𝕡", url="https://t.me/share/url?url=https://t.me/joinchat/Q1uroGQ645U1OTg1&text=⚡️සුපිරි%20Movie%20Group%20එකක්%20තියනව.%20🎬%20Film%20එකේ%20නම%20දැම්ම%20ගමන්%20Film%20එක%20දෙන්නව😳.%20ඔන්න%20Link%20එක%20ඉක්මනට%20Join%20වෙන්න✅")]
-            )
+           )
             await message.reply_text(
                 f"<b>😊 single developer vihanga from Rule Breakers ☺මෙන්න ඔයා හොයන අහවල්, {message.text}</b>",
                 reply_markup=InlineKeyboardMarkup(buttons)
