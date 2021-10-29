@@ -131,7 +131,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
                 )
-                return
+                
 
 
         elif query.data.startswith("back"):
